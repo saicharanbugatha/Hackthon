@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Ticket Booking</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Book Your Movie Tickets</h1>
+    </header>
+
+    <main>
+        <section class="movie-selection">
+            <h2>Select a Movie</h2>
+            <select id="movie-dropdown">
+                <option value="">-- Select Movie --</option>
+                <option value="movie1">Movie Title 1</option>
+                <option value="movie2">Movie Title 2</option>
+                <option value="movie3">Movie Title 3</option>
+            </select>
+        </section>
+
+        <section class="showtime-selection" style="display: none;">
+            <h2>Select a Showtime</h2>
+            <div id="showtime-options">
+                <!-- Showtimes will be dynamically loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <section class="seat-selection" style="display: none;">
+            <h2>Select Your Seats</h2>
+            <div id="screen"></div>
+            <div id="seat-map">
+                <!-- Seat map will be dynamically generated here by JavaScript -->
+            </div>
+            <div class="legend">
+                <div class="seat available"></div> <span>Available</span>
+                <div class="seat selected"></div> <span>Selected</span>
+                <div class="seat occupied"></div> <span>Occupied</span>
+            </div>
+        </section>
+
+        <section class="booking-summary" style="display: none;">
+            <h2>Booking Summary</h2>
+            <p>Movie: <span id="summary-movie"></span></p>
+            <p>Showtime: <span id="summary-showtime"></span></p>
+            <p>Seats: <span id="summary-seats"></span></p>
+            <p>Total Price: $<span id="summary-price"></span></p>
+            <button id="confirm-booking-btn">Confirm Booking</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cinema Booking System</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
